@@ -1,64 +1,226 @@
+/*
+  Este es un comentario en CSS. Los comentarios son ignorados por el navegador
+  y nos sirven para dejar notas y explicaciones en nuestro código.
+*/
+
+/*
+  El selector universal (*) se utiliza para aplicar estilos a TODOS los elementos de la página.
+  Es útil para establecer un punto de partida común y resetear los estilos por defecto del navegador.
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina el margen exterior de todos los elementos. */
+    padding: 0; /* Elimina el relleno interior de todos los elementos. */
+    box-sizing: border-box; /* Cambia el modelo de caja para que el padding y el borde no aumenten el tamaño total del elemento. */
 }
 
+/*
+  El selector 'html' se utiliza para aplicar estilos al elemento raíz del documento.
+*/
+html{
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave al hacer clic en enlaces internos. */
+}
+
+/*
+  El selector 'body' se utiliza para aplicar estilos al cuerpo de la página web.
+  Aquí establecemos un color de fondo para toda la página.
+*/
 body {
-    background-color: rgb(238, 216, 188);
+    background-color: rgb(238, 216, 188); /* Color de fondo similar a un tono de madera claro. */
 }
 
+/*
+  Las clases se definen con un punto (.) seguido del nombre de la clase.
+  La clase 'container' se utiliza para centrar el contenido y darle un ancho máximo.
+*/
 .container {
-    width: 98%;
-    max-width: 1200px;
-    margin: 1rem auto;
-    border-radius: 1rem;
-    background-color: white;
-    padding: 1rem;
+    width: 100%; /* El ancho del contenedor será el 100% del ancho de su elemento padre (en este caso, el body). */
+    max-width: 1200px; /* El ancho máximo del contenedor será de 1200 píxeles. Esto evita que se vea demasiado ancho en pantallas grandes. */
+    margin: 1rem auto; /* Centra el contenedor horizontalmente y le da un margen superior e inferior de 1rem. */
+    border-radius: 1rem; /* Redondea las esquinas del contenedor. */
+    background-color: white; /* Establece el color de fondo del contenedor en blanco. */
+    padding: 1rem; /* Añade un relleno interior de 1rem alrededor del contenido del contenedor. */
 }
 
+/*============== Navegación =================*/
+
+/*
+  Estilos para la lista desordenada dentro de la etiqueta <nav>.
+*/
+nav ul {
+    display: flex; /* Convierte la lista en un contenedor flexible, colocando los elementos en una fila. */
+    justify-content: space-around; /* Distribuye los elementos de la lista uniformemente a lo largo del contenedor. */
+    padding: 1rem; /* Añade un relleno interior de 1rem. */
+}
+
+/*
+  Estilos para los elementos de la lista dentro de la navegación.
+*/
+nav ul li {
+    list-style: none; /* Elimina las viñetas de la lista. */
+}
+
+/*
+  Estilos para los enlaces (hipervínculos).
+*/
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces. */
+    color: black; /* Establece el color del texto en negro. */
+    font-weight: bolder; /* Pone el texto en negrita. */
+    font-size: 1.5rem; /* Establece el tamaño de la fuente en 1.5rem. */
+}
+
+/*
+  La pseudo-clase ':hover' se aplica cuando el usuario pasa el ratón sobre el elemento.
+*/
+a:hover {
+    color: brown; /* Cambia el color del texto a marrón cuando el ratón está sobre el enlace. */
+}
+
+
+/*
+  El selector 'img' se aplica a todas las imágenes de la página.
+*/
 img {
-    width: 100%;
-    border-radius: 1rem;
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho de su contenedor. */
+    border-radius: 1rem; /* Redondea las esquinas de las imágenes. */
 }
 
-p{
-    margin: 1rem 0;
+/*
+  El selector 'p' se aplica a todos los párrafos de la página.
+*/
+p {
+    margin: 1rem 0; /* Añade un margen superior e inferior de 1rem a los párrafos. */
 }
 
-.rojo {
-    color: brown;
+/*
+  La clase 'titulo' se utiliza para dar estilo a los títulos principales.
+*/
+.titulo {
+    color: brown; /* Establece el color del texto en marrón. */
 }
 
+/*
+  El selector 'section' se aplica a todas las etiquetas <section> de la página.
+*/
 section {
-    padding: 1rem;
+    padding: 1rem; /* Añade un relleno interior de 1rem a las secciones. */
 }
 
+/*
+  La clase 'tiempo' se utiliza para destacar la sección de tiempo de preparación.
+*/
 .tiempo {
-    background-color: rgb(245, 225, 244);
-    border-radius: 0.5rem; 
+    background-color: rgb(245, 225, 244); /* Color de fondo rosa claro. */
+    border-radius: 0.5rem; /* Redondea las esquinas. */
 }
 
-ul, ol{
-    list-style-position: inside;
-    margin-top: 0.5rem;
+/*
+  Los selectores 'ul' y 'ol' se aplican a las listas desordenadas y ordenadas, respectivamente.
+*/
+ul, ol {
+    list-style-position: inside; /* Coloca los marcadores de la lista (viñetas o números) dentro del área de la lista. */
+    margin-top: 0.5rem; /* Añade un margen superior de 0.5rem a las listas. */
 }
 
-hr{
-    margin: 0 1rem;
-    color: rgba(0, 0, 0, 0.4);
+/*
+  El selector 'hr' se aplica a las líneas horizontales.
+*/
+hr {
+    margin: 0 1rem; /* Añade un margen izquierdo y derecho de 1rem a la línea horizontal. */
+    color: rgba(0, 0, 0, 0.4); /* Establece el color de la línea con transparencia. */
 }
 
+/*
+  El selector 'table' se aplica a las tablas.
+*/
 table {
-    width: 100%;
+    width: 100%; /* Hace que la tabla ocupe todo el ancho de su contenedor. */
 }
 
+/*
+  El selector 'td' se aplica a las celdas de la tabla.
+*/
 td {
-    padding: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 0.5rem; /* Añade un relleno interior de 0.5rem a las celdas. */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); /* Añade un borde inferior a las celdas. */
 }
 
-.attribution {
-    text-align: center;
-    margin-bottom: 1rem;
+/*============== Formulario =================*/
+
+/*
+  Estilos para el formulario.
+*/
+form {
+    display: flex; /* Convierte el formulario en un contenedor flexible. */
+    flex-direction: column; /* Coloca los elementos del formulario en una columna. */
+    gap: 16px; /* Añade un espacio de 16px entre los elementos del formulario. */
+}
+
+/*
+  Estilos para las etiquetas del formulario.
+*/
+form label {
+    font-weight: 600; /* Pone el texto de la etiqueta en negrita (semi-bold). */
+}
+
+/*
+  Estilos para los campos de entrada y áreas de texto del formulario.
+*/
+input, textarea {
+    padding: 10px 12px; /* Añade un relleno interior a los campos. */
+    background-color: #fdfdfd; /* Establece un color de fondo ligeramente gris. */
+    border: 1px solid #ccc; /* Añade un borde gris claro. */
+    border-radius: 4px; /* Redondea las esquinas de los campos. */
+}
+
+/*
+  Estilos para el contenedor de los campos de tiempo.
+*/
+.formulario-tiempo {
+    display: flex; /* Convierte el div en un contenedor flexible. */
+    gap: 1rem; /* Añade un espacio de 1rem entre los dos campos de tiempo. */
+}
+
+
+
+/*
+  Estilos para los divs dentro del contenedor de tiempo.
+*/
+.formulario-tiempo div {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio disponible. */
+}
+
+/*
+  Estilos para el botón de envío del formulario.
+*/
+form button {
+    background-color: brown; /* Establece el color de fondo en marrón. */
+    color: white; /* Establece el color del texto en blanco. */
+    font-weight: 600; /* Pone el texto en negrita (semi-bold). */
+    font-size: 1rem; /* Establece el tamaño de la fuente en 1rem. */
+    padding: 1rem; /* Añade un relleno interior de 1rem. */
+    border: none; /* Elimina el borde del botón. */
+    border-radius: 10px; /* Redondea las esquinas del botón. */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón. */
+    transition: background-color 0.2s; /* Añade una transición suave al cambiar el color de fondo. */
+}
+
+/*
+  Estilos para el botón de envío cuando el ratón está sobre él.
+*/
+form button:hover {
+    background-color: rgb(180, 64, 64); /* Cambia el color de fondo a un marrón más oscuro. */
+}
+
+/*
+  Media query para pantallas pequeñas.
+  Cuando el ancho de la pantalla es de 600px o menos, se aplican estos estilos.
+*/
+@media (max-width: 600px) {
+  /*
+    Cambia la dirección del contenedor de tiempo a columna en pantallas pequeñas.
+  */
+  .formulario-tiempo {
+    flex-direction: column;
+  }
 }

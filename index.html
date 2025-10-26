@@ -1,90 +1,243 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<!--
+  Los comentarios en HTML se escriben así.
+  No son visibles en la página web y sirven para dejar notas y explicaciones.
+-->
 
+<!--
+  <!DOCTYPE html> define el tipo de documento. En este caso, es un documento HTML5,
+  la versión más moderna de HTML.
+-->
+<!DOCTYPE html>
+<!--
+  La etiqueta <html> es el elemento raíz de una página HTML.
+  El atributo 'lang' especifica el idioma del contenido de la página, en este caso, español.
+-->
+<html lang="es">
+<!--
+  La etiqueta <head> contiene metadatos sobre el documento, como el título,
+  los enlaces a hojas de estilo y scripts, y otra información que no se muestra
+  directamente en la página.
+-->
+<head>
+  <!--
+    <meta charset="UTF-8"> especifica la codificación de caracteres del documento.
+    UTF-8 es un estándar que incluye la mayoría de los caracteres y símbolos.
+  -->
+  <meta charset="UTF-8">
+  <!--
+    <meta name="viewport"> controla cómo se muestra la página en dispositivos móviles.
+    'width=device-width' hace que el ancho de la página se ajuste al ancho del dispositivo.
+    'initial-scale=1.0' establece el nivel de zoom inicial cuando se carga la página.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    La etiqueta <link> se usa para enlazar recursos externos.
+    Aquí, enlazamos nuestra hoja de estilos CSS para que se apliquen los diseños a la página.
+  -->
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  
+  <!--
+    Aquí enlazamos el ícono (favicon) que se muestra en la pestaña del navegador.
+  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+
+  <!--
+    La etiqueta <title> define el título del documento, que se muestra en la
+    barra de título del navegador o en la pestaña de la página.
+  -->
   <title>Receta</title>
 
 </head>
+<!--
+  La etiqueta <body> contiene todo el contenido visible de la página web:
+  textos, imágenes, enlaces, tablas, etc.
+-->
 <body>
 
+    <!--
+      La etiqueta <div> es un contenedor genérico que se usa para agrupar otros elementos.
+      La clase 'container' se usa para aplicar estilos específicos a este contenedor desde el CSS.
+    -->
     <div class="container">
+        <!--
+          La etiqueta <header> representa un contenedor para contenido introductorio
+          o un conjunto de enlaces de navegación.
+        -->
         <header>
+            <!--
+              La etiqueta <nav> se usa para definir un bloque de enlaces de navegación.
+            -->
+            <nav>
+                <ul>
+                    <!--
+                      La etiqueta <a> crea un hipervínculo. El atributo 'href' especifica la URL
+                      a la que apunta el enlace. En este caso, son enlaces internos a secciones
+                      de la misma página, identificadas por su 'id'.
+                    -->
+                    <li><a href="#receta">Receta Tortilla</a></li>
+                    <li><a href="#formulario">Nuevas recetas</a></li>
+                </ul>
+            </nav>
+            <!--
+              La etiqueta <img> se usa para incrustar imágenes.
+              'src' es la ruta de la imagen y 'alt' es un texto alternativo que se muestra
+              si la imagen no se puede cargar. Es importante para la accesibilidad.
+            -->
             <img src="img/image-omelette.jpeg" alt="Tortilla campesina">
         </header>
+        <!--
+          La etiqueta <main> representa el contenido principal y dominante del <body> de un documento.
+        -->
         <main>
-            <h1>Simple Omelette Recipe</h1>
+            <!--
+              <h1>, <h2>, <h3>, etc., son etiquetas de encabezado.
+              <h1> es el más importante y <h6> es el menos importante.
+              El atributo 'id' es un identificador único para un elemento. Se puede usar
+              para enlazar a esta sección desde otras partes de la página.
+            -->
+            <h1 id="receta">Tortilla Campesina</h1>
+            <!--
+              La etiqueta <p> se usa para párrafos de texto.
+            -->
             <p>
-                An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-                to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+                Un plato fácil y rápido, perfecto para cualquier comida. Esta clásica tortilla combina huevos batidos y cocinados a la perfección, y se puede rellenar con el queso, las verduras o la carne que prefieras.
             </p>
+            <!--
+              La etiqueta <section> define una sección en un documento.
+              Se usa para agrupar contenido relacionado.
+            -->
             <section class="tiempo">
-                <h3 class="rojo">Preparation time</h3>
+                <h3 class="titulo">Tiempo de preparación</h3>
+                <!--
+                  La etiqueta <ul> crea una lista desordenada (con viñetas).
+                  Cada elemento de la lista se define con la etiqueta <li>.
+                -->
                 <ul>
-                    <li><b>Total:</b> Approximately 10 minutes</li>
-                    <li><b>Preparation:</b> 5 minutes</li>
-                    <li><b>Cooking:</b> 5 minutes</li>
+                    <!-- La etiqueta <b> se usa para poner texto en negrita. -->
+                    <li><b>Total:</b> Aproximadamente 10 minutos</li>
+                    <li><b>Preparación:</b> 5 minutos</li>
+                    <li><b>Cocinando:</b> 5 minutos</li>
                 </ul>
             </section>
             <section>
-                <h2 class="rojo">Ingredients</h2>
+                <h2 class="titulo">Ingredientes</h2>
                 <ul>
-                    <li>2-3 large eggs</li>
-                    <li>Salt, to taste</li>
-                    <li>Pepper, to taste</li>
-                    <li>1 tablespoon of butter or oil</li>
-                    <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+                    <li>2-3 huevos grandes</li>
+                    <li>Sal, al gusto</li>
+                    <li>Pimienta, al gusto</li>
+                    <li>1 cucharada sopera de aceite de oliva</li>
+                    <li>Ingredientes opcionales: queso, vegetales troceados, carne cocinada, hierbas</li>
                 </ul>
             </section>
+            <!--
+              La etiqueta <hr> crea una línea horizontal, que se usa para separar contenido.
+            -->
             <hr>
             <section>
-                <h2 class="rojo">Instructions</h2>
+                <h2 class="titulo">Instrucciones</h2>
+                <!--
+                  La etiqueta <ol> crea una lista ordenada (numerada).
+                  Cada elemento de la lista se define con la etiqueta <li>.
+                -->
                 <ol>
-                    <li><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-                        You can add a tablespoon of water or milk for a fluffier texture.</li>
-                    <li><b>Heat the pan:</b> Place a non-stick frying pan over medium heat and add butter or oil.</li>
-                    <li><b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-                        the eggs evenly coat the surface.</li>
-                    <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the 
-                        middle, sprinkle your chosen fillings over one half of the omelette.</li>
-                    <li><b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the 
-                        fillings. Let it cook for another minute, then slide it onto a plate.</li>
-                    <li><b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.</li>
+                    <li><b>Batir los huevos:</b> En un cuento, batir los huevos con una pizca de sal y pimienta hasta que estén bien mezclados. Puedes añadir una cucharada de agua o leche para que tenga una textura más suave</li>
+                    <li><b>Calentar la sartén:</b> Poner la sartén sobre el fuego medio y añadir el aceite.</li>
+                    <li><b>Cocinar la tortilla:</b> Una vez que el aceite está caliente, poner los huevos e inclinar la sartén para distribuirlos uniformemente.</li>
+                    <li><b>Agregar el relleno (opcional):</b> Cuando los huevos comiencen a cuajar, agregar el resto de los ingredientes a un lado.</li>
+                    <li><b>Doblar y servir:</b> Doblar la tortilla y cocinar durante un minuto más antes de servir.</li>
+                    <li><b>Disfruta:</b> Servir caliente, añadiendo sal y pimienta al gusto.</li>
                 </ol>
             </section>
             <hr>
             <section>
-                <h2 class="rojo">Nutrition</h2>
-                <p>The table below shows nutritional values per serving without the additional fillings.</p>
+                <h2 class="titulo">Nutrición</h2>
+                <p>La siguiente tabla muestra los valores nutricionales por porción sin los rellenos adicionales.</p>
+                <!--
+                  La etiqueta <table> se usa para crear tablas.
+                  <tr> define una fila de la tabla.
+                  <td> define una celda de la tabla.
+                -->
                 <table>
                     <tr>
-                        <td>Calories</td>
-                        <td class="rojo"><b>277kcal</b></td>
+                        <td>Calorías</td>
+                        <td class="titulo"><b>277kcal</b></td>
                     </tr>
                     <tr>
-                        <td>Carbs</td>
-                        <td class="rojo"><b>0g</b></td>
+                        <td>Carbohidratos</td>
+                        <td class="titulo"><b>0g</b></td>
                     </tr>
                     <tr>
-                        <td>Protein</td>
-                        <td class="rojo"><b>20g</b></td>
+                        <td>Proteinas</td>
+                        <td class="titulo"><b>20g</b></td>
                     </tr>
                     <tr>
-                        <td>Fat</td>
-                        <td class="rojo"><b>22g</b></td>
+                        <td>Grasas</td>
+                        <td class="titulo"><b>22g</b></td>
                     </tr>
                 </table>
+            </section>
+            <!--
+              Esta sección contiene un formulario para que los usuarios puedan enviar sus propias recetas.
+              El atributo 'id' permite enlazar a esta sección.
+            -->
+            <section class="formulario" id="formulario">
+                <h2>Crea tu propia receta</h2>
+                <p>Comparte tu plato favorito. Completa el siguiente formulario con tu receta favorita.</p>
+                <!--
+                  La etiqueta <form> se usa para crear un formulario.
+                  El atributo 'action' especifica a dónde se enviarán los datos del formulario.
+                  En este caso, '#' es un marcador de posición.
+                -->
+                <form action="#">
+                    <!--
+                      La etiqueta <label> define una etiqueta para un elemento de formulario.
+                      El atributo 'for' asocia la etiqueta con un campo de formulario específico
+                      (a través del 'id' del campo).
+                    -->
+                    <label for="titulo">Nombre de la receta</label>
+                    <!--
+                      La etiqueta <input> crea un campo de entrada.
+                      'type="text"' es un campo de texto de una sola línea.
+                      'name' es el nombre del campo, que se envía con los datos del formulario.
+                      'placeholder' es un texto de ejemplo que se muestra en el campo.
+                      'required' indica que este campo es obligatorio.
+                    -->
+                    <input type="text" id="titulo" name="titulo" placeholder="Ejemplo: Tortitas de chocolate" required>
+
+                    <label for="descripcion">Descripción</label>
+                    <!--
+                      La etiqueta <textarea> crea un área de texto de varias líneas.
+                      'rows' especifica el número de líneas visibles.
+                    -->
+                    <textarea id="descripcion" name="descripcion" rows="3" placeholder="Describe tu receta..."></textarea>
+
+                    <div class="formulario-tiempo">
+                        <div>
+                            <label for="tiempo-preparacion">Tiempo de preparación (min)</label>
+                            <!-- 'type="number"' es un campo para introducir números. -->
+                            <input type="number" id="tiempo-preparacion" name="tiempo-preparacion" min="1" placeholder="10">
+                        </div>
+                        <div>
+                            <label for="tiempo-cocina">Tiempo de cocinado (min)</label>
+                            <input type="number" id="tiempo-cocina" name="tiempo-cocina" min="1" placeholder="15">
+                        </div>
+                    </div>
+
+                    <label for="ingredientes">Ingredientes</label>
+                    <textarea id="ingredientes" name="ingredientes" rows="4" placeholder="Enumera los ingredientes"></textarea>
+
+                    <label for="instrucciones">Instrucciones</label>
+                    <textarea id="instrucciones" name="instrucciones" rows="5" placeholder="Describe como se prepara"></textarea>
+
+                    <!--
+                      La etiqueta <button> crea un botón.
+                      'type="submit"' hace que el botón envíe el formulario.
+                    -->
+                    <button type="submit">Enviar Receta</button>
+                </form>
             </section>
         </main>
     </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
